@@ -16,17 +16,17 @@ function App() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsDesktop(window.innerWidth >= 768); // md breakpoint
+      setIsDesktop(window.innerWidth >= 768); 
     };
 
-    handleResize(); 
+    handleResize();
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
-    <div>
+    <div className="space-y-3 [&>*]:!my-3 [&>*]:!py-3 [&>*]:!mt-3 [&>*]:!mb-3">
       <Navbar />
       <Hero />
       {isDesktop && <FirstScreen />}

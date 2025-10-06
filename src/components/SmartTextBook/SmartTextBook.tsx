@@ -2,10 +2,9 @@ import React from "react";
 
 const SmartTextbook: React.FC = () => {
   return (
-    <section className="bg-[#1E3A8A] text-white py-12 px-6 md:px-25">
+    <section className="bg-[#5580D4] text-white py-12 px-6 md:px-25">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
         
-        {/* Left side */}
         <div className="md:w-1/3 space-y-6 text-center md:text-left">
           <h3 className="text-sm tracking-widest font-semibold text-blue-200 uppercase">
             Smart Textbook

@@ -8,19 +8,21 @@ const Navbar: React.FC = () => {
 
   const handleActive = (page: string) => {
     setActive(page);
-    setIsOpen(false); // close menu on mobile after selecting
+    setIsOpen(false);
   };
 
   return (
     <nav className="w-full bg-white shadow-sm">
-      <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-        {/* Logo */}
+      <div className="max-w-7xl mx-auto px-6 py-0 flex items-center justify-between">
         <div className="flex items-center space-x-2">
-          <img src="/logo.png" alt="Edustart Logo" className="h-8 w-8" />
-          <span className="text-xl font-semibold text-blue-600">edustart</span>
+          <img
+            src="/logo.png"
+            alt="Edustart Logo"
+            className="h-12 md:h-14 w-auto object-contain"
+          />
         </div>
 
-        {/* Desktop Links */}
+        {/* 🔹 Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
           {["Home", "Products", "Gallery"].map((item) => (
             <a
@@ -29,8 +31,8 @@ const Navbar: React.FC = () => {
               onClick={() => handleActive(item)}
               className={`font-medium transition ${
                 active === item
-                  ? "text-blue-600 border-b-2 border-blue-600"
-                  : "text-gray-600 hover:text-blue-600"
+                  ? "text-[#5580D4] border-b-2 border-[#5580D4]"
+                  : "text-gray-600 hover:text-[#5580D4]"
               }`}
             >
               {item}
@@ -39,17 +41,17 @@ const Navbar: React.FC = () => {
           <a
             href="#"
             onClick={() => handleActive("Contact Us")}
-            className={`px-4 py-2 rounded-md shadow transition ${
+            className={`px-3 py-1.5 rounded-md shadow transition text-sm ${
               active === "Contact Us"
-                ? "bg-blue-700 text-white"
-                : "bg-blue-600 text-white hover:bg-blue-700"
+                ? "bg-[#5580D4] text-white"
+                : "bg-[#5580D4] text-white hover:bg-[#4a72bf]"
             }`}
           >
             Contact Us
           </a>
         </div>
 
-        {/* Hamburger Icon */}
+        {/* 🔹 Mobile Menu Toggle */}
         <button
           className="md:hidden flex flex-col space-y-1 focus:outline-none"
           onClick={handleToggle}
@@ -60,7 +62,7 @@ const Navbar: React.FC = () => {
         </button>
       </div>
 
-      {/* Mobile Dropdown */}
+      {/* 🔹 Mobile Dropdown */}
       {isOpen && (
         <div className="md:hidden bg-white shadow-md px-6 pb-4 space-y-3">
           {["Home", "Products", "Gallery"].map((item) => (
@@ -70,8 +72,8 @@ const Navbar: React.FC = () => {
               onClick={() => handleActive(item)}
               className={`block font-medium ${
                 active === item
-                  ? "text-blue-600 border-l-4 border-blue-600 pl-2"
-                  : "text-gray-600 hover:text-blue-600"
+                  ? "text-[#5580D4] border-l-4 border-[#5580D4] pl-2"
+                  : "text-gray-600 hover:text-[#5580D4]"
               }`}
             >
               {item}
@@ -82,8 +84,8 @@ const Navbar: React.FC = () => {
             onClick={() => handleActive("Contact Us")}
             className={`block px-4 py-2 rounded-md shadow ${
               active === "Contact Us"
-                ? "bg-blue-700 text-white"
-                : "bg-blue-600 text-white hover:bg-blue-700"
+                ? "bg-[#5580D4] text-white"
+                : "bg-[#5580D4] text-white hover:bg-[#4a72bf]"
             }`}
           >
             Contact Us

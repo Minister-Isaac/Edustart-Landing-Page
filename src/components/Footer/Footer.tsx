@@ -19,18 +19,17 @@ const Footer: FC = () => {
 
   return (
     <footer className="bg-[#142b4d] text-white pt-10 pb-6 px-6 relative">
-      {/* Main footer content */}
+      
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 text-center md:text-left">
-        {/* Logo (image) */}
+        
         <div className="flex justify-center md:justify-start">
           <img
-            src="/logo.png" /* <-- replace with your logo path */
+            src="/logo.png" 
             alt="Edustart Tech Logo"
             className="w-36 object-contain"
           />
         </div>
 
-        {/* Company */}
         <div>
           <h3 className="font-semibold mb-3 text-sm text-gray-200">COMPANY</h3>
           <ul className="space-y-2 text-sm text-gray-300">
@@ -40,7 +39,6 @@ const Footer: FC = () => {
           </ul>
         </div>
 
-        {/* Resources */}
         <div>
           <h3 className="font-semibold mb-3 text-sm text-gray-200">RESOURCES</h3>
           <ul className="space-y-2 text-sm text-gray-300">
@@ -50,7 +48,6 @@ const Footer: FC = () => {
           </ul>
         </div>
 
-        {/* Help */}
         <div>
           <h3 className="font-semibold mb-3 text-sm text-gray-200">HELP</h3>
           <ul className="space-y-2 text-sm text-gray-300">
@@ -72,14 +69,12 @@ const Footer: FC = () => {
         </div>
       </div>
 
-      {/* Copyright (always at the base, centered) */}
       <div className="mt-10">
         <p className="text-center text-sm text-gray-400">
           © {year} Edustartech. All rights reserved.
         </p>
       </div>
 
-      {/* Floating scroll-to-top button */}
       <button
         type="button"
         aria-label="Scroll to top"

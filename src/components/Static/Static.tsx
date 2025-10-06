@@ -2,9 +2,8 @@ import React from "react";
 
 const SmartLearning: React.FC = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between px-6 md:px-16 pt-6 md:pt-16 pb-8 md:pb-16 max-w-6xl mx-auto md:gap-16">
+    <section className="flex flex-col md:flex-row items-center justify-between px-6 md:px-6 pt-6 md:pt-16 pb-8 md:pb-16 max-w-6xl mx-auto md:gap-16">
       
-      {/* Image (mobile first, desktop second) */}
       <div className="md:w-1/2 flex justify-center order-1 md:order-2">
         <img
           src="/isaac.png"
@@ -13,7 +12,6 @@ const SmartLearning: React.FC = () => {
         />
       </div>
 
-      {/* Text content + button (mobile second, desktop first) */}
       <div className="md:w-1/2 space-y-4 md:space-y-6 order-2 md:order-1 mt-6 md:mt-0 text-center md:text-left">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug">
           Learning, Made Smarter <br /> in 3 Simple Steps
@@ -32,8 +30,7 @@ const SmartLearning: React.FC = () => {
           </li>
         </ol>
 
-        {/* Button always inside text, but styled for full width on mobile */}
-        <button className="w-full md:w-auto px-5 py-3 rounded-md bg-blue-600 text-white font-medium hover:bg-blue-700 transition">
+        <button className="w-full md:w-auto px-5 py-3 rounded-md bg-[#5580D4] text-white font-medium hover:bg-blue-700 transition">
           LEARN MORE
         </button>
       </div>
